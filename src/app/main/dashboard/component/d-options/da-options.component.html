@@ -1,0 +1,167 @@
+<div class="d-flex flex-column flex-md-row align-items-end align-items-md-start justify-content-between">
+    <div class="d-flex align-items-center flex-wrap" [formGroup]="filterForm">
+        <!-- <pre>
+            {{dropdownList | json}}
+        </pre> -->
+        <!-- Company -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" (change)="getDistributionByFilter()" placeholder="Company"
+                [multiple]="true" [searchable]="true" formControlName="companyId">
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+                <ng-option [value]="null" [disabled]="true">Select Company</ng-option>
+                <ng-option *ngFor="let list of dropdownList[0].data" [value]="list">{{list}}</ng-option>
+            </ng-select>
+        </div>
+        <!-- End: Gender -->
+
+        <!-- Gender -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" (change)="getDistributionByFilter()" placeholder="Gender"
+                [multiple]="true" [searchable]="true" formControlName="genderId">
+                <ng-option [value]="null" [disabled]="true">Select Gender</ng-option>
+                <ng-option *ngFor="let list of dropdownList[1].data" [value]="list">{{list}}</ng-option>
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+            </ng-select>
+        </div>
+        <!-- End: Gender -->
+
+        <!-- Brand Type -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" (change)="getDistributionByFilter()" placeholder="Brand Type"
+                [multiple]="true" [searchable]="true" formControlName="brandtypeId">
+                <ng-option [value]="null" [disabled]="true">Select Brand Type</ng-option>
+                <ng-option *ngFor="let list of dropdownList[2].data" [value]="list">{{list}}</ng-option>
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+            </ng-select>
+        </div>
+        <!-- End: Brand Type -->
+
+        <!-- Category -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" (change)="getDistributionByFilter()" placeholder="Category"
+                [multiple]="true" [searchable]="true" formControlName="categoryId">
+                <ng-option [value]="null" [disabled]="true">Select Category</ng-option>
+                <ng-option *ngFor="let list of dropdownList[3].data" [value]="list">{{list}}</ng-option>
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+            </ng-select>
+        </div>
+        <!-- End: Category -->
+
+        <!-- Sub Category -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" #subCategory (change)="getDistributionByFilter()"
+                placeholder="Sub Category" [searchable]="true" [multiple]="true" formControlName="subcategoryId">
+                <ng-option [value]="null" [disabled]="true">Select Sub Category</ng-option>
+                <ng-option *ngFor="let list of dropdownList[4].data" [value]="list">{{list}}</ng-option>
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+            </ng-select>
+        </div>
+        <!-- End: Sub Category -->
+
+        <!-- AG -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" #agId (change)="getDistributionByFilter()" placeholder="AG"
+                [searchable]="true" [multiple]="true" formControlName="agId">
+                <ng-option [value]="null" [disabled]="true">Select AG</ng-option>
+                <ng-option *ngFor="let list of dropdownList[5].data" [value]="list">{{list}}</ng-option>
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+            </ng-select>
+        </div>
+        <!-- End: AG -->
+
+
+        <!-- brandnameId -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" #brandName (change)="getDistributionByFilter()"
+                placeholder="Brand Name" [searchable]="true" [multiple]="true" formControlName="brandnameId">
+                <ng-option [value]="null" [disabled]="true">Select Brand Name</ng-option>
+                <ng-option *ngFor="let list of dropdownList[6].data" [value]="list">{{list}}</ng-option>
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+            </ng-select>
+        </div>
+        <!-- End: brandnameId -->
+        <!-- periodId -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" (change)="getDistributionByFilter()" [bindLabel]="'name'"
+                [bindValue]="'name'" placeholder="Period" [multiple]="true" [searchable]="true"
+                formControlName="periodId">
+                <ng-option [value]="null" [disabled]="true">Select Period</ng-option>
+                <ng-option *ngFor="let list of dropdownList[7].data" [value]="list">{{list}}</ng-option>
+                <ng-template ng-multi-label-tmp let-items="items" let-clear="clear">
+                    <div class="ng-value" *ngFor="let item of items | slice:0:1">
+                        <span class="ng-value-label">{{item}}</span>
+                        <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+                    </div>
+                    <div class="ng-value" *ngIf="items.length > 1">
+                        <span class="ng-value-label">{{items.length - 1}} more...</span>
+                    </div>
+                </ng-template>
+            </ng-select>
+        </div>
+        <!-- End: periodId -->
+
+        <div class="select-md">
+            <input class="form-check-input" (change)="toggleShowLakhs($event)" type="checkbox" id="check1" name="option1" value="something" checked>
+            <label class="form-check-label">&nbsp; In Lakhs</label>
+        </div>
+        <!-- End: periodId -->
+
+      
+    </div>
+</div>

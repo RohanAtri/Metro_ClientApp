@@ -1,0 +1,37 @@
+<div class="d-flex flex-column overflow-hidden">
+    <div (scroll)="theadScroll($event)" class="hide-scroll overflow-horizontal flex-shrink-0" #tableHead>
+        <table id="theadTable" class="table table-primary">
+            <thead>
+                <tr>
+                    <th class="custom-size text-center" scope="col" *ngFor="let tableHeader of tableRecords?.header">{{tableHeader.placeHolderName}}
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div (scroll)="tbodyScroll($event)" class="flex-grow-1 overflow-auto" #tableBody>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let data of tableRecords?.data;let i=index" class="custom-size">
+                    <td class="custom-size" *ngFor="let s of tableRecords?.header">
+                        <!--  -->
+                        <ng-template
+                            *ngIf="s.propName =='transactionDate' || s.propName =='uploadedAt' then inputType else textField ">
+                        </ng-template>
+                        <ng-template #inputType>
+                            {{(data[s.propName] ? data[s.propName] :'-' )}}
+                        </ng-template>
+                        <ng-template #textField>
+                            {{data[s.propName] ? data[s.propName] :'-' }}
+                        </ng-template>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="h-0 d-flex justify-content-center align-items-center bg-white shadow-sm" *ngIf="noDataFound">
+    <!-- <h5 class="text-danger">
+        {{errorMessage ? errorMessage : 'No Data Found'}}
+    </h5> -->
+</div>

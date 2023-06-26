@@ -1,0 +1,59 @@
+// Global styles goes here
+html,
+body {
+  height  : 100%;
+  overflow: hidden;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-nodrop {
+  cursor: no-drop;
+}
+
+.overflow-vertical {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.overflow-horizontal {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+// Custom scrollbar style for Mozilla
+* {
+  scrollbar-color: $custom-scrollbar-thumb-color $custom-scrollbar-track-color;
+  scrollbar-width: thin;
+}
+
+// Custom scrollbar style for Chrome and Edge
+/* width */
+::-webkit-scrollbar {
+  width : $custom-scrollbar-width;
+  height: $custom-scrollbar-width;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $custom-scrollbar-track-color;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background   : $custom-scrollbar-thumb-color;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $custom-scrollbar-thumb-hover-color;
+}
+
+.hide-scroll {
+  &::-webkit-scrollbar {
+    height    : 0px;
+  }
+}

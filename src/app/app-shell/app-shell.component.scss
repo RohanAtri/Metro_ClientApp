@@ -1,0 +1,21 @@
+.spinner-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba($color: #000000, $alpha: 0.15);
+    z-index: 99;
+
+    .spinner-border { 
+        border-color: #3e3e3e;
+        border-right-color: transparent;
+    }
+    // height: 3rem;
+    // left: 50%;
+    // top: 50%;
+    // // transform: translate(-50%, 0);
+}

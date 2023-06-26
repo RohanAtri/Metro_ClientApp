@@ -1,0 +1,77 @@
+<div class="d-flex flex-column overflow-hidden h-100">
+    <div *ngIf="!errorMessage" class="hide-scroll overflow-horizontal flex-shrink-0" #tableHead
+        [ngStyle]="{'min-height.px':tableHeaderHeight }">
+        <table id="theadTable" class="table table-primary">
+            <thead>
+                <tr>
+                    <th scope="col" class="text-center" *ngFor="let tableHeader of tableData?.header"
+                        [class.lg-width]="tableHeader.propName =='limit'">{{tableHeader.placeHolderName}}</th>
+                </tr>
+                <tr>
+                    <th scope="col" *ngIf="tableData">
+                        <input type="text" placeholder="Search" [ngModel]="showroom"
+                            (ngModelChange)="searchShowroom($event)" class="form-control form-control-sm mb-0 border-0">
+                    </th>
+                    <th scope="col" class="text-end pe-2" *ngFor="let tableHeader of searchRow;let i=index">
+                        <span *ngIf="tableHeader.placeHolderName.indexOf('(L)') == -1" data-toggle="tooltip" data-placement="right" [title]="tableHeader.val">{{tableHeader.val}}</span>
+                        <span *ngIf="tableHeader.placeHolderName.indexOf('(L)') > -1" data-toggle="tooltip" data-placement="right" [title]="tableHeader.val">{{tableHeader.val | amountFormater:tableHeader}}</span>
+                    </th>
+                </tr>
+                <tr *ngIf="headers">
+                    <th scope="col" class="pe-2" [ngClass]="{'text-end': i > 0 ||tableHeader===0}"
+                        *ngFor="let tableHeader of headers[1];let i=index">
+                        <span *ngIf="tableHeader.placeHolderName.indexOf('(L)') == -1" data-toggle="tooltip" data-placement="right" [title]="tableHeader.val">{{tableHeader.val}}</span>
+                        <span *ngIf="tableHeader.placeHolderName.indexOf('(L)') > -1" data-toggle="tooltip" data-placement="right" [title]="tableHeader.val">{{tableHeader.val | amountFormater:tableHeader}}</span>
+                    </th>
+                </tr>
+                <tr *ngIf="headers">
+                    <th scope="col" class="pe-2" [ngClass]="{'text-end': i > 0 ||tableHeader===0}"
+                        *ngFor="let tableHeader of headers[2];let i=index">
+                        <span *ngIf="tableHeader.placeHolderName.indexOf('(L)') == -1" data-toggle="tooltip" data-placement="right" [title]="tableHeader.val">{{tableHeader.val}}</span>
+                        <span *ngIf="tableHeader.placeHolderName.indexOf('(L)') > -1" data-toggle="tooltip" data-placement="right" [title]="tableHeader.val">{{tableHeader.val | amountFormater:tableHeader}}</span>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div *ngIf="!errorMessage" (scroll)="tbodyScroll($event)" class="flex-grow-1 overflow-auto">
+        <table class="table">
+            <tbody>
+                <tr [ngClass]="{'table-active':data.isNew}" *ngFor="let data of dataRecords ">
+                    <td *ngFor="let s of tableData?.header;let i=index"
+                        [ngClass]="{'text-end': s.propName != 'showroom' && s.propName != 'nextFilter'}"
+                        [class.lg-width]="s.propName =='limit'">
+                        <ng-template *ngIf="s.propName =='limit' then inputType else textField ">
+                        </ng-template>
+                        <ng-template #inputType>
+                            <input style="text-align:end;" [disabled]="dataLock" type="number" min="0" step="0.01"
+                                oninput="validity.valid||(value='');" [(ngModel)]="data[s.propName]"
+                                (focus)="data['old'+s.propName]=data[s.propName];"
+                                (change)="saveAmount(data,s.propName)" class="form-control form-control-sm mb-0"
+                                *ngIf="access['update_'+s.propName]">
+                            <span *ngIf="!access['update_'+s.propName]">{{data[s.propName] ? data[s.propName]
+                                :'-'}}</span>
+                        </ng-template>
+                        <!-- <ng-template #textField>
+                            <span>{{!data[s.propName] ?'-' :data[s.propName]}}</span>
+                        </ng-template> -->
+                        <ng-template #textField>
+                            <span data-toggle="tooltip" data-placement="right" [title]="!data[s.propName] ?'-' :data[s.propName]" *ngIf="s.placeHolderName.indexOf('(L)') == -1">{{!data[s.propName] ?'-' :data[s.propName]}}</span>
+                            <span data-toggle="tooltip" data-placement="right" [title]="!data[s.propName] ?'-' :data[s.propName]" *ngIf="s.placeHolderName.indexOf('(L)') > -1">{{!data[s.propName] ?'-' :data[s.propName] | amountFormater:s }}</span>
+                        </ng-template>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- -->
+    <div class="h-100 d-flex justify-content-center align-items-center bg-white shadow-sm" *ngIf="errorMessage">
+        <h5 class="text-danger">
+            {{errorMessage ? errorMessage : 'No Data Found'}}
+        </h5>
+    </div>
+
+    <app-pagination *ngIf="tableData && !errorMessage" [updateCurrentPageNumber]="updateCurrentPageNumber"
+        (currentPageNumber)="getTableData($event)" [totalRecords]="tableData?.totalRows">
+    </app-pagination>
+</div>

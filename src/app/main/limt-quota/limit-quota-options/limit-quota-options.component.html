@@ -1,0 +1,57 @@
+<div class="d-flex flex-column flex-md-row align-items-end align-items-md-start justify-content-between">
+
+    <div class="d-flex align-items-center flex-wrap" [formGroup]="filterForm">
+        <!-- Company -->
+        <div class="select-md">
+            <ng-select class="mb-0 ng-select-sm" [items]="dropdownList[0].data" [searchable]="true"
+                placeholder="Company" [searchable]="true" bindLabel="name" bindValue="id" formControlName="companyId">
+            </ng-select>
+        </div>
+        <!-- End: Company -->
+        <!-- Gender -->
+        <div class="select-md" *ngIf="activeTab==1">
+            <ng-select class="mb-0 ng-select-sm" #gender [items]="dependentDropdownList[0].data" [searchable]="true" placeholder="Gender"
+                [searchable]="true" bindLabel="name" bindValue="id" formControlName="genderId">
+            </ng-select>
+        </div>
+        <!-- End: Gender -->
+
+        <!-- Brand Type -->
+        <div class="select-md" *ngIf="activeTab==1">
+            <ng-select class="mb-0 ng-select-sm" #brandType [items]="dependentDropdownList[1].data" [searchable]="true"
+                placeholder="Brand Type" [searchable]="true" bindLabel="name" bindValue="id"
+                formControlName="brandtypeId">
+            </ng-select>
+        </div>
+        <!-- End: Brand Type -->
+
+        <!-- Category -->
+        <div class="select-md" *ngIf="activeTab==1">
+            <ng-select class="mb-0 ng-select-sm" #category [items]="dependentDropdownList[2].data" [searchable]="true"
+                placeholder="Category" [searchable]="true" bindLabel="name" bindValue="id" formControlName="categoryId">
+            </ng-select>
+        </div>
+        <!-- End: Category -->
+
+        <!-- Period -->
+        <div class="select-md calendar">
+            <ng-select class="mb-0 ng-select-sm" #category [items]="dropdownList[1].data" [searchable]="true" placeholder="Period"
+                [searchable]="true" bindLabel="name" bindValue="id" formControlName="periodId"
+                (change)="periodChanged($event.id)">
+            </ng-select>
+        </div>
+        <!-- End: Period -->
+    </div>
+
+    <ng-template #content let-modal>
+        <app-reference-uploads></app-reference-uploads>
+    </ng-template>
+
+    <div class="d-flex align-items-center flex-shrink-0 ms-3 pt-1">
+        <button class="btn btn-sm btn-transparent me-3" *ngIf="access?.read" (click)="download()">
+            <span class="icon icon-download"></span>
+        </button>
+        <button class="btn btn-sm btn-outline-secondary" *ngIf="access?.create"
+            (click)="openUploadDialog(content)">Upload</button>
+    </div>
+</div>

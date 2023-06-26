@@ -1,0 +1,121 @@
+// All the SCSS Variables goes here
+
+// Fonts
+$font-size-base: 1rem;
+$font-family-base: 'Roboto',
+sans-serif;
+$font-bold       : 500;
+$line-height-base: 1;
+
+$enable-shadows: true;
+
+// common
+$transition-timing: 0.4s;
+$link-decoration  : none;
+
+// Border-radius
+$border-radius : 10px;
+$rounded-circle: 50%;
+
+// Sidebar
+$sidebar-width           : 220px;
+$brand-text-size         : 1.8rem;
+$nav-item-padding-x      : 1rem;
+$nav-item-padding-y      : 1rem;
+$nav-item-margin-bottom  : 2rem;
+$header-nav-padding-x    : 1.5rem;
+$header-nav-padding-y    : 1.8rem;
+$header-nav-margin-bottom: 1rem;
+
+// Header
+$topbar-nav-padding-x: 1rem;
+$topbar-nav-padding-y: 1rem;
+$badge-size          : 6px;
+$brand-img-size      : 40px;
+$badge-icon-size     : 14px;
+
+// Content Main
+$content-title-font-size    : 2rem;
+$content-title-margin-bottom: 1.5rem;
+
+// Card
+$card-border-radius    : $border-radius;
+$card-text-font-size   : 2.2rem;
+$card-text-font-size-sm: 0.825rem;
+$card-icon-font-size   : 1.8rem;
+$card-padding-x        : 1.5rem;
+$card-padding-y        : 1.5rem;
+$card-gap              : 2rem;
+$card-title-spacer-y   : 0;
+
+// Table
+$table-cell-padding-y: 0.10rem;
+$table-cell-padding-x: 0.35rem;
+$table-border-width  : 0;
+
+
+// Custom scrollbar
+$custom-scrollbar-width: 7px;
+
+// Progress
+$progress-height: 0.725rem;
+
+// Button
+$btn-padding-y    : 0.6rem;
+$btn-border-radius: $border-radius;
+$btn-font-size    : 14px;
+$btn-padding-y    : 0.6rem;
+$btn-padding-x    : 1.4rem;
+$btn-border-radius-sm: 8px;
+
+
+// FOrm
+$input-btn-padding-y     : $btn-padding-y;
+$input-field-margin-y    : 1rem;
+$input-border-radius     : 6px;
+$input-font-size         : 14px;
+$form-feedback-font-size : 0.75rem;
+$form-feedback-margin-top: 0;
+// $form-select-indicator   : url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 330 400' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M433.18 0.980469L217 271.01L0.820312 0.980469H433.18Z' fill='black'/></svg>");
+$form-select-indicator   : url("data:image/svg+xml,<svg width='10' height='10' viewBox='0 0 434 272' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M433.18 0.980469L217 271.01L0.820312 0.980469H433.18Z' fill='black'/></svg>");
+$form-select-bg-size: 12px 7px;
+
+// Nav
+$nav-link-padding-y    : 0.65rem;
+$navbar-brand-padding-y: 0;
+$navbar-brand-padding-x: 0;
+$nav-tabs-border-width : 0;
+
+// modal
+$modal-dialog-margin-y-sm-up: 0;
+$modal-content-border-radius: 0;
+$modal-content-border-width : 0;
+$btn-close-opacity          : 1;
+$btn-close-focus-shadow     :none;
+// $modal-inner-padding: 
+
+// Dropdown
+$dropdown-border-width  : 0;
+$dropdown-item-padding-y: 0.5rem;
+$dropdown-border-radius : 6px;
+
+// container
+$container-max-widths: (sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1270px,
+  xxl: 1320px,
+  xxxl: 1780px);
+
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1920px);
+
+  // Spinners
+  $spinner-width: 3rem;
+  $spinner-height: 3rem;

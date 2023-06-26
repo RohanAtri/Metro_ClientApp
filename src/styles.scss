@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~/src/assets/icons/style.scss';
+@import '~/src/assets/scss/base/index';
+
+// @import '~/node_modules/bootstrap/scss/bootstrap.scss';
+@import '~/src/assets/scss/vendor/bootstrap-base';
+@import '~/src/assets/scss/vendor/bootstrap-components';
+@import '~/src/assets/scss/vendor/ng-select';
+@import "~@ng-select/ng-select/scss/default.theme.scss";
+
+// Project Specific Components
+@import '~/src/assets/scss/component/index';
+
+// Now other style import
+@import '~/src/assets/scss/layout/index';
+
+@import '~/src/assets/scss/utilities/index';
+
+
+.container, .container-fluid, .container-xxxl, .container-xxl, .container-xl, .container-lg, .container-md, .container-sm {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.10rem);
+    padding-left: var(--bs-gutter-x, 0.10rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form-control-sm {
+    padding: 0.05rem 0.05rem;
+}
+.col-form-label {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+// remove this
+.material-icons {
+    color: #919191;
+    font-size: 16px;
+}
+
+td {
+    overflow-wrap: break-word !important;
+}
+
+.custom-size {
+    padding: 0.45rem 0.75rem !important;
+}
+
+.user-name {
+    padding: 4px;
+    font-size: 13px;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+}
+
+.full-width{
+    max-width: 100% !important;
+}

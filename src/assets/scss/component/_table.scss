@@ -1,0 +1,119 @@
+.table {
+    border-collapse: collapse;
+    text-align     : left;
+    font-size      : $font-size-sm;
+    margin-bottom  : 0;
+    table-layout   : fixed;
+
+    th,
+    td {
+        min-width: 50px;
+        width: auto;
+        font-size: 12px;
+    }
+    .lg-width{
+        width: 150px !important;
+        // text-align: right; 
+        // input { 
+        //     text-align: right; 
+        // }
+    }
+
+    &.table-primary {
+        tr {
+            th {
+                padding            : 0.45rem 0.75rem;
+                color              : $black;
+                background-color   : #E3E5E8;
+                vertical-align     : middle;
+                font-weight        : normal;
+            }
+
+            &:first-child {
+                th {
+                    font-weight     : bold;
+                    top             : 0;
+                    color           : $white;
+                    background-color: $primary;
+                }
+            }
+
+            &:nth-child(3) {
+                th {
+                    background-color: #F6F6F6;
+                }
+            }
+        }
+    }
+
+    &-header {
+        background-color: $table-header-bg;
+    }
+
+    th {
+        color           : $table-heading-color;
+        background-color: $table-header-bg;
+    }
+
+    td {
+        vertical-align     : middle;
+        background-color   : $white;
+        // padding         : $table-cell-padding;
+        border-color       : $table-cell-border-color;
+        border-bottom      : 1px solid $table-border-bottom;
+    }
+
+    tr {
+        .srno-cell {
+            width: 80px;
+        }
+
+        .action-cell {
+            width     : 140px;
+            text-align: center;
+        }
+
+        .status-cell {
+            width     : 140px;
+            text-align: center;
+        }
+    }
+}
+
+.table> :not(:first-child) {
+    border-color: var(--bs-gray-300);
+}
+
+met-table {
+    display       : flex;
+    flex-direction: column;
+    height        : 100%;
+}
+
+.tree-table-wrapper {
+    .table {
+        td {
+            padding: 0.30rem 0.65rem;
+        }
+
+        tr {
+            >div {
+                &.hide {
+                    max-height: 0px;
+                    overflow  : hidden;
+                    transition: max-height .5s;
+                }
+
+                &.animate-row {
+                    max-height: 400px;
+                    transition: max-height .5s;
+                }
+            }
+        }
+    }
+}
+
+    .table-active {
+        --bs-table-accent-bg: rgb(255, 158, 158) !important;
+        color: var(--bs-table-active-color);
+    }

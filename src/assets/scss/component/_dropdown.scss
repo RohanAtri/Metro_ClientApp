@@ -1,0 +1,7 @@
+.dropdown {
+    .btn {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<app-da-options [dropdownList]="dropdownList" (filterData)="getDistributionByFilters($event,$event)" [access]="fAccess">
+</app-da-options>
+<div class="d-flex flex-column overflow-hidden h-100">
+    <h3>
+        <span style="padding: 10px">Reports</span>
+    </h3>
+
+    <div class="vh-100  bg-white shadow-sm" [formGroup]="filterForm">
+
+        <div class="card" style="width: 30%;height: 8rem;">
+            <div class="card-body">
+                <div class="heading">
+                    <div class="select-md">
+                        <ng-select class="mb-0 ng-select-sm" [items]="reports" [searchable]="true"
+                            placeholder="Select report" [searchable]="true" bindLabel="name" bindValue="id"
+                            formControlName="report" (change)="showerror=false;">
+                        </ng-select>
+                        <span *ngIf="showerror" class="danger">name is required</span>
+                    </div>
+                </div>
+                <div class="action">
+                    <button class="btn btn-outline-secondary btn-sm me-3" (click)="export()">Export</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

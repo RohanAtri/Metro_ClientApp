@@ -1,0 +1,17 @@
+<ul ngbNav #nav="ngbNav"  class="nav-tabs" [(activeId)]="activeTab" (navChange)="resetFilters($event)"  [animation]="false">
+    <li [ngbNavItem]="2">
+        <a ngbNavLink>Showroom</a>
+        <ng-template ngbNavContent>
+            <app-distribution [apiURL]="apiPath" [apiHeaderPath]="apiHeaderPath" [apiDownloadPath]="apiDownloadPath" [tabIndex]="activeTab" ></app-distribution>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="1">
+        <a ngbNavLink>SubCategory And Ag</a>
+        <ng-template ngbNavContent>
+            <app-distribution [apiURL]="apiPath" [apiHeaderPath]="apiHeaderPath" [apiDownloadPath]="apiDownloadPath" [tabIndex]="activeTab" ></app-distribution>
+        </ng-template>
+    </li>
+</ul>
+<div class="flex-grow-1 overflow-hidden">
+    <div [ngbNavOutlet]="nav" class="h-100 overflow-hidden"></div>
+</div>

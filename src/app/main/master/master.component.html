@@ -1,0 +1,43 @@
+<ng-template #content let-modal>
+    <app-master-data-modal [modal]="modal" [dataToEdit]="dataToEdit" [activeTabNumber]="active" [title]="modalTitle"
+        (masterDataValue)="saveData($event)" (resetData)="resetData($event)">
+    </app-master-data-modal>
+</ng-template>
+
+<ng-template #contentRole let-modal>
+    <app-role-function [modal]="modal" [dataToEdit]="roleDataToEdit" (saveRole)="saveRole($event)">
+    </app-role-function>
+</ng-template>
+<!-- -->
+<ng-template #contentUser let-modal>
+    <app-user-function [modal]="modal" 
+      [userAccessDropdown]="userAccessDropdownList"
+      [dependentDropdownList]="dependentDropdownList"
+      [userAccessData]="userAccessData"
+      (changedKey)="changedKey($event)"
+      (saveUserAccessData)="saveUserAccessData($event)">
+    </app-user-function>
+</ng-template>
+
+
+
+<div class="d-flex flex-column h-100 overflow-hidden">
+    <div class="d-flex justify-content-between align-items-center">
+        <ul ngbNav #nav="ngbNav" class="nav-tabs" [(activeId)]="active" [animation]="false"
+            (activeIdChange)="loadMasterDataComponent('getAllMaster')">
+            <li [ngbNavItem]="i+1" *ngFor="let tab of masterDataTabs;let i=index">
+                <a ngbNavLink>{{tab.name}}</a>
+                <ng-template ngbNavContent>
+                    <met-table [tableData]="tableData" [tableName]="modalTitle" [tableSettings]="service"
+                        (dataToEdit)="getDataToEdit($event)" (updateStatus)="updateStatus($event)"
+                        (dataToDelete)="deleteData($event)" (addtionalAction)="action($event)" [access]="fAccess"></met-table>
+                </ng-template>
+            </li>
+        </ul>
+        <div class="flex-shrink-0 px-1">
+            <button type="button" class="btn btn-secondary btn-sm" (click)="openAddNewModal(content)" *ngIf="fAccess?.create">+ Add New</button>
+        </div>
+    </div>
+
+    <div [ngbNavOutlet]="nav" class="mt-3 h-100 overflow-hidden"></div>
+</div>

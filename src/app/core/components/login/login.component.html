@@ -1,0 +1,38 @@
+<section class="d-flex g-0 h-100">
+    <div class="col-6 d-none d-lg-block">
+        <figure class="login-bg h-100">
+            <img src="../../../../assets/images/bg-login.png" alt="Login bg">
+        </figure>
+    </div>
+    <div class="col-12 col-lg-6">
+        <div class="d-flex align-items-center justify-content-center login-form-section px-lg-4 py-lg-5">
+            <form class="form-wrapper overflow-auto" [formGroup]="loginForm">
+                <div class="col-12 col-sm-6 col-lg-12 mx-auto">
+                    <figure class="brand-img">
+                        <img src="../../../../assets/images/brand-logo.png" class="img-fluid" alt="Metro Brand Logo">
+                    </figure>
+                    <p class="text-gray-dark text-center mb-5">Welcome to Metro</p>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <input type="email" class="form-control" formControlName="email" id="email"
+                            aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <!-- Ends: Email -->
+
+                    <!-- Password -->
+                    <div class="mb-3">
+                        <input type="password" class="form-control" formControlName="password" id="password"
+                            placeholder="Password">
+                    </div>
+                    <!-- Ends: Password -->
+
+                    <div class="mt-5 pt-4">
+                        <button type="button" class="btn btn-danger w-100" (click)="login()">{{name}}</button>
+                    </div>
+                    <div class="text-danger" style="padding: 10px 0 10px 0">{{errorMessage}}</div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

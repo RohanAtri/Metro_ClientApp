@@ -1,0 +1,47 @@
+// Form controls styles goes here
+$custom-file-upload-height: 120px;
+
+.form-label {
+  color: $text-muted;
+}
+
+.form-control,
+.form-select {
+  background-color: $white;
+  margin-bottom: 1rem;
+}
+
+.form-control:not(:last-child) {
+  margin-bottom: $input-field-margin-y;
+}
+
+.invalid-feedback {
+  // position: absolute;
+  bottom: -2px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.select-md {
+  margin-bottom: 0.2rem;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  select {
+    @include media-breakpoint-up(md) {
+      min-width: 150px;
+    }
+  }
+}

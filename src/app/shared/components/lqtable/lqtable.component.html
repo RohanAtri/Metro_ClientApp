@@ -1,0 +1,67 @@
+<div class="d-flex flex-column overflow-hidden h-100" *ngIf="!noDataFound">
+    <div (scroll)="theadScroll($event)" class="hide-scroll overflow-horizontal flex-shrink-0" #tableHead>
+        <table id="theadTable" class="table table-primary">
+            <thead>
+                <tr>
+                    <th class="text-center" scope="col" *ngFor="let tableHeader of tableData?.header">
+                        {{tableHeader.placeHolderName}}</th>
+                </tr>
+                <tr>
+                    <th class="px-2" [ngClass]="{'text-end': i > 1 ||tableHeader===0}"
+                        *ngFor="let tableHeader of headers[0];let i=index">
+                        {{tableHeader}}
+                    </th>
+                </tr>
+                <tr>
+                    <th class="px-2" [ngClass]="{'text-end': i > 1||tableHeader===0}"
+                        *ngFor="let tableHeader of headers[1];let i=index">
+                        {{tableHeader}}
+                    </th>
+                </tr>
+                <tr>
+                    <th class="px-2" [ngClass]="{'text-end': i > 1||tableHeader===0}"
+                        *ngFor="let tableHeader of headers[2];let i=index">
+                        {{tableHeader}}
+                    </th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div (scroll)="tbodyScroll($event)" class="flex-grow-1 overflow-auto" #tableBody>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let data of dataRecords;let i=index">
+                    <td *ngFor="let s of tableData?.header">
+                        <ng-template
+                            *ngIf="s.propName =='limit' || s.propName =='quota' then inputType else textField ">
+                        </ng-template>
+                        <ng-template #inputType>
+                            <input style="text-align:end;" [disabled]="dataLock && dataLock[s.propName]"
+                                [(ngModel)]="data[s.propName]" (focus)="data['old'+s.propName]=data[s.propName];"
+                                (change)="saveLimitAndQuotaAmount(data,s.propName)" type="number" min="0" step="0.01"
+                                oninput="validity.valid||(value='');" class="form-control form-control-sm mb-0"
+                                *ngIf="access['update_'+s.propName]">
+                            <span class="mb-0" *ngIf="!access['update_'+s.propName]">{{data[s.propName] ?
+                                data[s.propName] :'-'}}</span>
+                        </ng-template>
+                        <!-- <ng-template #textField>
+                            {{data[s.propName] ? data[s.propName] :'-'}}
+                        </ng-template> -->
+                         <ng-template #textField>
+                            <span *ngIf="s.placeHolderName.indexOf('(L)') == -1">{{!data[s.propName] ?'-' :data[s.propName]}}</span>
+                            <span *ngIf="s.placeHolderName.indexOf('(L)') > -1">{{!data[s.propName] ?'-' :data[s.propName] | amountFormater:data[s.propName] }}</span>
+                        </ng-template>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="h-100 d-flex justify-content-center align-items-center bg-white shadow-sm" *ngIf="noDataFound">
+    <h5 class="text-danger">
+        {{errorMessage ? errorMessage : 'No Data Found'}}
+    </h5>
+</div>
+<app-pagination *ngIf="!noDataFound && isPaginatedTable" [updateCurrentPageNumber]="updateCurrentPageNumber"
+    (currentPageNumber)="getTableData($event)" [totalRecords]="tableData.totalRows" [recordPerPage]="recordPerPage">
+</app-pagination>

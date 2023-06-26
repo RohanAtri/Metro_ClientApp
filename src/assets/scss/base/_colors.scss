@@ -1,0 +1,80 @@
+// Theme Colors
+$primary : #CB011B;
+$secondary: #669933;
+$white   : #ffffff;
+$black   : #000000;
+$success : #04e300;
+$danger  : #CB011B;
+$warning : #ffc800;
+$info    : #8d63d3;
+$dark    : #111111;
+
+// Mainly use for Normal Text color
+$gray      : #989d9e;
+$gray-600  :#707070;
+// Body
+$body-color: $black;
+$body-bg   : #F0F2F5;
+
+// Fonts
+$text-muted: #9fa9bc;
+
+// Link color
+// $link-color: $white;
+// $link-hover-color: $white;
+
+// Sidebar
+// $link-hover-color: $primary;
+
+// Nav
+$navbar-light-color               : $black;
+$nav-link-hover-color             : $danger;
+$link-active-color                : $danger;
+$navbar-light-active-color        : $link-active-color;
+$navbar-light-hover-color         : $link-active-color;
+$nav-tabs-link-active-color       : $danger;
+$nav-link-color                   : $gray-600;
+$nav-tabs-link-hover-border-color : $danger;
+$nav-tabs-link-active-border-color: $danger;
+// Border
+$border-color                     : #343434;
+
+// Table
+$table-header-bg        : #E3E5E8;
+$table-cell-border-color:#29314a;
+$table-heading-color    :#707070;
+$table-border-bottom    :#E3E5E8;
+
+$theme-colors: ("primary": $primary,
+  "warning": $warning,
+  "secondary": $secondary,
+  "success": $success,
+  "danger": $danger,
+  "info": $info,
+  "dark": $dark,
+  "gray": $gray,
+  "white": $white,
+  "gray-dark": $gray-600);
+
+// Custom scrollbar
+$custom-scrollbar-thumb-color      : lighten($gray, 10%);
+$custom-scrollbar-thumb-hover-color: lighten($gray, 5%);
+$custom-scrollbar-track-color      : rgba($black, 0.06);
+
+$sidebar-scrollbar-thumb-color      : darken($gray, 10%);
+$sidebar-scrollbar-thumb-hover-color: darken($gray, 5%);
+
+// Form
+$form-select-border-color: #C8CCD4;
+$form-select-color: #919191;
+// $input-border-color: #2c2c2c;
+
+
+// NGX Bootstrap Datepicker
+$theme-list: ("primary": $primary);
+
+// Contrast Ratio
+$min-contrast-ratio: 3;
+
+// Dropdown
+$dropdown-box-shadow: 0 .125rem .25rem rgba(0,0,0, 7.5%);

@@ -1,0 +1,38 @@
+<div class="h-100">
+    <!-- brandnameId -->
+    <div class="d-flex justify-content-end flex-column overflow-hidden h-100" [formGroup]="filterControls">
+        <div class="d-flex justify-content-end">
+            <div class="select-md">
+                <ng-select class="mb-0 ng-select-sm" formControlName="backDays" [items]="backDays"
+                    (click)="changeByBackDays($event)" placeholder="Back Days" [searchable]="true">
+                </ng-select>
+            </div>
+            <div>
+                <input class="form-control form-control-sm" (change)="changeByBackDays($event)"
+                    formControlName="company" type="text" placeholder="Search">
+            </div>
+            <div class="flex-shrink-0 px-1">
+                <button class="btn btn-secondary btn-sm" (click)="openUploadDialog(content)">Upload</button>
+            </div>
+            <ng-template #content let-modal>
+                <app-reference-uploads></app-reference-uploads>
+            </ng-template>
+        </div>
+        <!-- End: brandnameId -->
+
+        <!-- reference upload modal -->
+
+
+        <div class="d-flex align-items-center flex-grow-1 overflow-auto" *ngIf="tableData?.data.length">
+            <app-o-table class="overflow-hidden" [access]="fAccess" [tableData]="tableData"></app-o-table>
+        </div>
+        <app-pagination *ngIf="tableData?.data.length" [totalRecords]="tableData?.totalRows"
+            [updateCurrentPageNumber]="currentPageNumber" (currentPageNumber)="getTableData($event)">
+        </app-pagination>
+        <div class="d-flex h-100 justify-content-center align-items-center"
+            *ngIf="!tableData || tableData?.data.length==0">
+            No Records Found
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.custom-switches {
+  .switch {
+    background: #fb6542;
+
+    small {
+      background: #375e97;
+    }
+
+    &.checked {
+      background: #3f681c;
+    }
+  }
+}
+
+
+.active-status {
+  color: #669933;
+}
+
+.inactive-status {
+  color: rgb(255, 0, 0);
+}

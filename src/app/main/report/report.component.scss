@@ -1,0 +1,21 @@
+.card {
+    margin-top: 10px;
+    margin-left: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.heading {
+    padding: 10px;
+    width: 100%;
+}
+
+.ng-select {
+    max-width: 100% !important;
+}

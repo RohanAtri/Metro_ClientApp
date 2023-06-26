@@ -1,0 +1,41 @@
+<div>
+    <div class="modal-header">
+        <span>Uploads</span>
+        <button class="btn-close" (click)="closeModal()">
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-6">
+                <ng-select class="mb-0" [items]="enumKeys" [searchable]="true" placeholder="Upload type"
+                    [searchable]="true" bindLabel="displayName" bindValue="uploadTypeId" [(ngModel)]="selectedType">
+                </ng-select>
+            </div>
+
+            <div class="col-6">
+                <input type="file" #file placeholder="Choose file" (change)="uploadFile(file.files)"
+                    accept="application/vnd.ms-excel,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                    style="display:none;">
+                <button type="button" class="btn btn-outline-secondary" (click)="file.click()"
+                    [disabled]="!selectedType||!isFileProcessed||isFilePosted">
+                    <span>Upload
+                        <span class="icon icon-upload"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="col-12 download-uploaded-file" *ngIf="isFileProcessed && processedFile!==null && !isLoading">
+                Last uploaded file : <a target="_blank" class="text-primary SUCCESS" style="cursor:pointer"
+                    (click)="downloadProcessedFile()">{{processedFile.fileName}}</a>
+            </div>
+            <div class="col-12" *ngIf="isLoading">
+                <span>File is under process, please check after sometime.</span>
+            </div>
+            <!-- <div class="col-12" *ngIf="!isFileProcessed&& processedFile!==null">
+                <h6>
+                    <span class="WARNING">File named "{{processedFile.fileName}}" is under process, please check after
+                        some time...</span>
+                </h6>
+            </div> -->
+        </div>
+    </div>
+</div>

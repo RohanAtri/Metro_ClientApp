@@ -1,0 +1,67 @@
+// Ng select variable overides
+
+$ng-select-placeholder    : #919191;
+$ng-select-value-font-size: $input-font-size;
+$ng-select-height         : $input-height;
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    font-size: 12px;
+}
+
+.ng-select {
+
+    min-width: 100px;
+    max-width: 220px;
+
+    .ng-select-container {
+        .ng-value-container {
+            .ng-placeholder {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &.ng-select-sm {
+        .ng-select-container {
+            height    : 30px !important;
+            min-height: 30px !important;
+        }
+    }
+
+    &.ng-select-single {
+        .ng-select-container {
+            .ng-value-container {
+                .ng-input {
+                    font-size: 0.875rem;
+                    top      : 8px !important;
+                }
+
+                .ng-value {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+}
+
+.select-md {
+    &.calendar {
+        .ng-select {
+            .ng-arrow-wrapper {
+                display: none;
+            }
+
+            .ng-select-container {
+                &:before {
+                    content    : '\e903';
+                    font-family: 'metro';
+                    position   : absolute;
+                    top        : 8px;
+                    right      : 10px;
+                    color      : #999999;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

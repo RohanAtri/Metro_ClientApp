@@ -1,0 +1,23 @@
+<app-toast aria-live="polite" aria-atomic="true"></app-toast>
+
+<div class="d-flex flex-column h-100">
+    <app-header></app-header>
+    <main class="container-xxxl flex-grow-1 overflow-hidden">
+        <div class="d-flex flex-column h-100 overflow-hidden">
+            <!-- <div class="" *ngIf="loading" style="width: 3rem; height: 3rem;" role="status">
+               
+            </div> -->
+            <!-- *ngIf="loader?.isLoading$ | async -->
+            <div *ngIf="loader.isLoading$ | async">
+                <div class="spinner-wrapper">
+                    <div class="spinner-border" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-column h-100 overflow-hidden">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </main>
+</div>

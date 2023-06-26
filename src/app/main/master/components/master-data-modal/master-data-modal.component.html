@@ -1,0 +1,41 @@
+<div>
+    <div class="modal-header">
+        <h6 class="modal-title">Add {{title}}</h6>
+        <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+    </div>
+    <div #modelBody class="modal-body" [formGroup]="masterDataForm">
+        <div class="row g-3">
+            <div [ngClass]="{'col-lg-6' :activeTabNumber == 11 || activeTabNumber ==8|| activeTabNumber ==14 }"
+                class="position-relative" *ngFor="let controlName of masterDataFormControls;let i=index;">
+                <!-- for normal module -->
+                <input *ngIf="controlName.type=='text'" class="form-control" [formControlName]="controlName.id"
+                    type="text" [placeholder]="controlName.name">
+                <!-- for product screen -->
+                <div class="select-md me-0">
+                    <ng-select class="mb-0 w-100 full-width" *ngIf="controlName.type=='select'" [items]="masterModuleData[i].data"
+                        [searchable]="true" (change)="getCityByState($event,controlName.id,activeTabNumber,controlName)"
+                        [placeholder]="controlName.name" bindLabel="name" bindValue="id" clearAllText="Clear"
+                        [formControlName]="controlName.id" (open)="ngSelectOpen()" (close)="ngSelectClose()">
+                    </ng-select>
+                </div>
+                <input *ngIf="controlName.type=='date'" class="form-control" [formControlName]="controlName.id"
+                    type="date" [placeholder]="controlName.name">
+                <small class="invalid-feedback d-block"
+                    *ngIf="masterDataFormControl?.get(controlName.id)?.touched && (masterDataFormControl.get(controlName.id)?.errors?.required)">
+                    This Field is required
+                </small>
+                <small class="invalid-feedback d-block"
+                    *ngIf="masterDataFormControl.get(controlName.id)?.errors?.minlength  || masterDataFormControl.get(controlName.id)?.errors?.maxlength">
+                    Phone Number should be of 10 Digits
+                </small>
+                <small class="invalid-feedback d-block"
+                    *ngIf="masterDataFormControl.get(controlName.id)?.errors?.email">
+                    Please enter a valid Email
+                </small>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer pt-0">
+        <button type="button" class="btn btn-secondary" (click)="saveMasterData()">Save</button>
+    </div>
+</div>

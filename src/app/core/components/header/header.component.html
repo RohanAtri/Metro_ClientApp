@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container-xxxl">
+        <a class="navbar-brand" [routerLink]="menuList[0].path">
+            <img src="../../../../assets/images/brand-logo.png" class="img-fluid" alt="Metro Brand Logo">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" [routerLink]="menu.path" *ngFor="let menu of menuList">
+                    <a class="nav-link " [routerLinkActive]="'active'">{{menu.name}}</a>
+                </li>
+            </ul>
+
+            <div class="user-name">
+                <span class="label label-default">{{userName}}</span>
+            </div>
+
+            <div class="dropdown">
+                <a class="btn p-0" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <figure class="profile-img">
+                        <img src="../../../../assets/images/avatar.png" class="img-fluid" alt="Avatar">
+                    </figure>
+                </a>
+
+                <ul class="dropdown-menu dropdown-menu-end shadow-sm mt-2" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item nav-item" (click)="openAddNewModal(content)">Change Password</a></li>
+                    <li><a class="dropdown-item nav-item" (click)="logout()">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<ng-template #content let-modal>
+
+    <app-change-password [modal]="modal"></app-change-password>
+
+</ng-template>

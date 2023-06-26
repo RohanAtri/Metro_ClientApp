@@ -1,0 +1,43 @@
+<div class="d-flex align-items-center">
+    <!-- title -->
+    <h5 class="mt-2 me-5 ml-1">Limit & Quota</h5>
+    <!-- End: title -->
+    <ul ngbNav #nav="ngbNav" class="nav-tabs"
+        (navChange)="resetFilters($event,filterOptions,setTableFilter(1, 30))" [(activeId)]="activeTab"
+        [animation]="false">
+        <li [ngbNavItem]="1">
+            <a ngbNavLink>Category</a>
+            <ng-template ngbNavContent>
+                <app-lqtable [activeTab]="activeTab" (totalValues)="summation($event)"
+                    [tableData]="tableData" (currentPageNumber)="getTableData($event)"
+                    [dataNotFoundMsg]="dataNotFoundMsg" [updateCurrentPageNumber]="pageNumber" [errorMessage]="errorMsg"
+                    [access]="fAccess" [dataLock]="dataLocked"></app-lqtable>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+            <a ngbNavLink>Company</a>
+            <ng-template ngbNavContent>
+                <app-lqtable [activeTab]="activeTab" (totalValues)="summation($event)"
+                    [tableData]="tableData" (currentPageNumber)="getTableData($event)"
+                    [dataNotFoundMsg]="dataNotFoundMsg" [errorMessage]="errorMsg" [access]="fAccess" [dataLock]="dataLocked"></app-lqtable>
+            </ng-template>
+        </li>
+    </ul>
+    <!-- Select Options  -->
+    <app-limit-quota-options class="flex-grow-1" 
+    [showOption]="showOption" 
+    [dependentDropdownList]="dependentDropdownList" 
+    [resetDropdownFilters]="resetDropdownFilters"
+    (filterOptions)="filterTable($event,$event)" 
+    [activeTab]="activeTab" 
+    [dropdownList]="dropdownList"
+    [access]="fAccess" 
+    (downloadData)="download($event)" 
+    (periodChange)="checkDataLock($event)"
+    (changedKey)="changedKey($event)">
+    </app-limit-quota-options>
+    <!-- End: Select Options  -->
+</div>
+<div class="flex-grow-1 overflow-hidden">
+    <div [ngbNavOutlet]="nav" class="h-100 overflow-hidden"></div>
+</div>

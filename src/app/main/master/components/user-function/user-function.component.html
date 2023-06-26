@@ -1,0 +1,67 @@
+<div class="modal-header">
+    <h6 class="modal-title">User Settings</h6>
+    <button type="button" class="btn-close" aria-label="Close" (click)="closeModal()"></button>
+</div>
+<div class="d-flex flex-column justify-content-between overflow-hidden h-100" [formGroup]="userAcessForm">
+    <!-- Company -->
+    <div class="select-md">
+        <ng-select class="mb-0  full-width" appendTo="body" [searchable]="true"  [multiple]="true"  placeholder="Company" formControlName="companyIds" [items]="userAccessDropdown[0].data"
+             bindLabel="name" bindValue="id">
+        </ng-select>
+    </div>
+    <!-- End: Company -->
+
+    <!-- Gender -->
+    <div class="select-md">
+        <ng-select class="mb-0  full-width" appendTo="body" [searchable]="true"  [multiple]="true" placeholder="Gender" formControlName="genderIds" [items]="dependentDropdownList[0].data"
+            bindLabel="name" bindValue="id">
+        </ng-select>
+    </div>
+    <!-- End: Gender -->
+
+    <!-- Brand Type -->
+    <div class="select-md">
+        <ng-select class="mb-0 full-width" appendTo="body" [searchable]="true"  [multiple]="true" placeholder="Brand Type" formControlName="brandtypeIds" [items]="dependentDropdownList[1].data"
+            bindLabel="name" bindValue="id">
+        </ng-select>
+    </div>
+    <!-- End: Brand Type -->
+
+    <!-- Category -->
+    <div class="select-md">
+        <ng-select class="mb-0 full-width" appendTo="body" [searchable]="true"  [multiple]="true" placeholder="Category"  formControlName="categoryIds"[items]="dependentDropdownList[2].data"
+            bindLabel="name" bindValue="id">
+        </ng-select>
+    </div>
+    <!-- End: Category -->
+
+    <!-- Sub Category -->
+    <div class="select-md">
+        <ng-select class="mb-0 full-width" appendTo="body" [searchable]="true"  [multiple]="true" placeholder="Sub Category" formControlName="subcategoryIds" [items]="dependentDropdownList[3].data"
+            bindLabel="name" bindValue="id">
+        </ng-select>
+    </div>
+    <!-- End: Sub Category -->
+
+    <!-- AG -->
+    <div class="select-md">
+        <ng-select class="mb-0 full-width" appendTo="body" [searchable]="true"  [multiple]="true" placeholder="AG" formControlName="agIds" [items]="dependentDropdownList[4].data"
+            bindLabel="name" bindValue="id">
+        </ng-select>
+    </div>
+    <!-- End: AG -->
+
+
+    <!-- brandnameId -->
+    <div class="select-md">
+        <ng-select class="mb-0 full-width" appendTo="body" [searchable]="true"  [multiple]="true" placeholder="Brand Name" formControlName="brandnameIds" [items]="dependentDropdownList[5].data"
+            bindLabel="name" bindValue="id">
+        </ng-select>
+    </div>
+    <!-- End: brandnameId -->
+
+    <div class="d-flex justify-content-end">
+        <button class="btn btn-secondary" (click)="saveUserData()">Save</button>
+    </div>
+
+</div>

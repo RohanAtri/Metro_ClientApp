@@ -1,0 +1,54 @@
+<app-da-options [dropdownList]="dropdownList" (filterData)="getDistributionByFilters($event,$event)" [access]="fAccess"
+(showLakhs)="showLakhs($event)">
+</app-da-options>
+<div class="tree-table-wrapper d-flex flex-column overflow-hidden h-100" *ngIf="!noDataFound">
+
+  <div (scroll)="theadScroll($event)" class="hide-scroll overflow-horizontal flex-shrink-0" #tableHead>
+    <table id="theadTable" class="table table-primary">
+      <thead>
+        <tr>
+          <th class="text-center" scope="col" *ngFor="let thd of tableData?.header">{{thd.placeHolderName}}</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div (scroll)="tbodyScroll($event)" class="hide-scroll flex-grow-1 overflow-auto bg-white" #tableBody>
+    <table id="theadTable" class="table">
+      <tbody>
+        <tr *ngFor="let data of dataRecords;let i=index">
+          <td *ngFor="let s of tableData?.header;let j=index">
+            <div class="d-flex align-items-center" [ngClass]="{'justify-content-end': j > 6 }">
+              <span class="icon cursor-pointer me-1" ngClass="{{data['Tg_'+j] ? 'icon-minus-box' :
+              'icon-add-box'}}" (click)="expand(i, j, data, s)"
+                *ngIf="data[s.propName] && !data[s.propName+'Exp'] && !isNumber(data[s.propName])"></span>
+              <span [ngClass]="{'text-end': i > 6 || data[s.propName]>-1,'text-center':!data[s.propName]}"
+                class="wrapword " data-toggle="tooltip" data-placement="right"
+                [title]="data[s.propName] ? data[s.propName] :'-'">
+                <span *ngIf="s.placeHolderName.indexOf('(L)') == -1">{{data[s.propName]?data[s.propName]:'-'}}</span>
+                <span *ngIf="s.placeHolderName.indexOf('(L)') > -1">{{data[s.propName]? (data[s.propName] | amountFormater:s ):'-'}}</span>
+              </span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- table footer -->
+  <div (scroll)="theadScroll($event)" #tableFoot class=" flex-shrink-0 ov erflow-horizontal">
+    <table class="table">
+      <tfoot>
+        <tr>
+          <td class="bg-dark text-white" *ngFor="let thd of tableData?.header">
+            <span *ngIf="thd.placeHolderName.indexOf('(L)') > -1">{{ thd | addAmount:dataRecords|amountFormater:thd}}</span>
+            <span *ngIf="thd.placeHolderName.indexOf('(L)') == -1">{{ thd | addAmount:dataRecords}}</span>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</div>
+<div class="h-100 d-flex justify-content-center align-items-center bg-white shadow-sm" *ngIf="noDataFound">
+  <h5 class="text-danger">
+    {{errorMessage ? errorMessage : 'No Data Found'}}
+  </h5>
+</div>

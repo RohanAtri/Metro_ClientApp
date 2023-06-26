@@ -1,0 +1,14 @@
+<div class="h-100">
+    <div class="d-flex flex-column pt-1 overflow-hidden h-100">
+        <app-d-options [dropdownList]="dropdownList" [tabIndex]="tabIndex"
+            [dependentDropdownList]="dependentDropdownList" (changedKey)="changedKey($event)"
+            (filterData)="getDistributionByFilters($event,$event)" 
+            [access]="fAccess" (downloadData)="download($event)" 
+            (periodChange)="checkDataLock($event)"
+            (showLakhs)="toggleShowLakhs($event)">
+        </app-d-options>
+        <app-d-table class="overflow-hidden h-100" [updateCurrentPageNumber]="pageNumber" [errorMessage]="errorMsg"
+            (filterData)="getDistributionBySerach($event)" (saveAmountData)="saveAmountData($event)"
+            (currentPageNumber)="getTableData($event)" [tableData]="tableData" [access]="fAccess" [dataLock]="dataLocked"></app-d-table>
+    </div>
+</div>

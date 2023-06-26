@@ -1,0 +1,61 @@
+<div *ngIf="tableData?.length" class="hide-scroll overflow-horizontal flex-shrink-0"  #tableHead>
+  <table class="table">
+    <thead>
+      <tr>
+        <th [ngClass]="{'action-cell' : data.title === 'Action', 'status-cell' : data.title === 'Status',
+           'srno-cell' : data.templateName === 'rowNumberTemplate'}"
+          *ngFor="let data of tableSettings.getTableColumnSettings()" scope="col"
+          class="custom-size">{{data.title}}</th>
+      </tr>
+    </thead>
+
+  </table>
+</div>
+<div *ngIf="tableData?.length" (scroll)="tbodyScroll($event)" class="flex-grow-1 overflow-auto bg-white">
+  <table class="table">
+    <tbody>
+      <tr *ngFor=" let data of tableData;let i=index" class="custom-size">
+        <td class="custom-size" [ngClass]="{'action-cell' : column.templateName === 'action' ,
+            'status-cell' : column.templateName === 'status', 
+            'srno-cell' : column.templateName === 'rowNumberTemplate'}"
+          *ngFor=" let column of tableSettings.getTableColumnSettings()">
+          <div *ngIf="column.templateName === 'rowNumberTemplate'">
+            {{data['id']}}
+          </div>
+          <div *ngIf="column.templateName === 'textTemplate'">
+            {{data[column.dataPropName] ? data[column.dataPropName] : '-'}}
+          </div>
+          <div *ngIf="column.templateName === 'numberTemplate'">
+            {{data[column.dataPropName]}}
+          </div>
+          <div class="d-flex justify-content-center" *ngIf="column.templateName === 'status'">
+            <div class="custom-switch">
+              <span class="custom-switch-text"
+                [ngClass]="data[column.dataPropName] ? 'active-status':'inactive-status'">
+                {{data[column.dataPropName] ? 'Active':'Inactive'}}
+              </span>
+              <input type="checkbox" [id]="'status'+i" (ngModelChange)="getStatus(data)"
+                [(ngModel)]="data[column.dataPropName]" class="custom-switch-input">
+              <label [for]="'status'+i" class="custom-switch-label" *ngIf="access?.update">
+                <span class="custom-switch-head"></span>
+              </label>
+            </div>
+          </div>
+          <div *ngIf="column.templateName === 'action'">
+            <span class="material-icons cursor-pointer me-3" (click)="addtionalData(data)"
+              *ngIf="tableName=='Role Master' || tableName=='User Master'">&#xe8b8;</span>
+            <span class="material-icons cursor-pointer me-3" (click)="editData(data)" *ngIf="access?.update">&#xe3c9;</span>
+            <span class="material-icons cursor-pointer" (click)="deleteData(data)" *ngIf="access?.delete">&#xe872;</span>
+          </div>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="d-flex justify-content-center align-items-center flex-grow-1 overflow-auto text-danger bg-white"
+  *ngIf="!tableData?.length">
+  <h4 class="mb-0">
+    No Records Found
+  </h4>
+</div>

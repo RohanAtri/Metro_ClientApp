@@ -1,0 +1,13 @@
+.nav-tabs {
+    .nav-link {
+        border-bottom: 2px solid transparent;
+        transition: 0.25s ease-in-out;
+        padding: $nav-link-padding-y 0;
+        margin: 0 0.725em;
+        &:hover,
+        &.active {
+            font-weight: $font-bold;
+            border-bottom-width: 2px;
+        }
+    }
+}

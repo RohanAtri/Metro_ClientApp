@@ -1,0 +1,1031 @@
+{
+  "company": [
+    {
+      "id": "001",
+      "name": "Metro",
+      "sName": "MS",
+      "isActive": false
+    },
+    {
+      "id": "002",
+      "name": "Mochi5",
+      "sName": "DS",
+      "isActive": true
+    },
+    {
+      "id": "004",
+      "name": "Crocs",
+      "sName": "AS",
+      "isActive": false
+    },
+    {
+      "id": "006",
+      "name": "Reebok",
+      "sName": "NS",
+      "isActive": true
+    },
+    {
+      "id": "K22jkMZ",
+      "name": "Google",
+      "sName": "GS",
+      "isActive": true
+    },
+    {
+      "id": "h4FgHGr"
+    },
+    {
+      "companyId": null,
+      "genderId": null,
+      "categoryId": null,
+      "subcategoryId": null,
+      "agId": null,
+      "brandtypeId": null,
+      "brandnameId": null,
+      "periodId": null,
+      "apiId": "limits",
+      "id": "1o3dz1s"
+    }
+  ],
+  "category": [
+    {
+      "id": "001",
+      "name": "Metro",
+      "sName": "MS",
+      "isActive": true
+    },
+    {
+      "id": "003",
+      "name": "Walkway",
+      "sName": "MS",
+      "isActive": false
+    },
+    {
+      "id": "004",
+      "name": "vvv",
+      "sName": "vvv",
+      "isActive": true
+    },
+    {
+      "id": "bdZMhSN",
+      "name": "Bhavik",
+      "sName": "gandhi",
+      "isActive": false
+    },
+    {
+      "id": "6oCWxhQ"
+    },
+    {
+      "companyId": null,
+      "genderId": null,
+      "categoryId": null,
+      "subcategoryId": null,
+      "agId": null,
+      "brandtypeId": null,
+      "brandnameId": null,
+      "periodId": null,
+      "apiId": "limits",
+      "id": "ozvTdv1"
+    },
+    {
+      "companyId": null,
+      "genderId": null,
+      "categoryId": null,
+      "subcategoryId": null,
+      "agId": null,
+      "brandtypeId": null,
+      "brandnameId": null,
+      "periodId": null,
+      "apiId": "limits",
+      "id": "s2FMKfE"
+    }
+  ],
+  "subcategory": [
+    {
+      "id": "006",
+      "name": "Reeboks",
+      "sName": "NS",
+      "isActive": false
+    },
+    {
+      "name": "category ",
+      "sName": "kkas",
+      "isActive": true,
+      "id": "ZGDPjDH"
+    },
+    {
+      "id": "Ua9wy2A",
+      "name": "new ",
+      "sName": "qwert",
+      "isActive": false
+    },
+    {
+      "id": "EZ9oFt-",
+      "name": "efwce",
+      "sName": "wefsc",
+      "isActive": true
+    }
+  ],
+  "product": [
+    {
+      "id": 4,
+      "name": "Reeboks",
+      "sname": "NS",
+      "companyName": "ccccccccc",
+      "genderName": "cccccccc",
+      "categoryName": "cccccccc",
+      "subcategoryName": "cccccccc",
+      "agName": "cccccccc",
+      "brandTypeName": "ccccccc",
+      "brandNameName": "ccccc",
+      "isActive": true
+    },
+    {
+      "id": 9,
+      "name": "Product",
+      "sname": "PS",
+      "companyName": "Mochi5",
+      "categoryName": "vvv",
+      "brandNameName": "cc",
+      "genderName": "sdf",
+      "agName": "sds",
+      "subcategoryName": "Reeboks",
+      "brandTypeName": "test",
+      "isActive": false
+    },
+    {
+      "id": 10,
+      "name": "Revant",
+      "sname": "RV",
+      "companyIdNo": "002",
+      "categoryIdNo": "003",
+      "brandNameIdNo": "2",
+      "genderIdNo": "2",
+      "agIdNo": "1",
+      "subcategoryIdNo": "Ua9wy2A",
+      "brandTypeIdNo": "1",
+      "isActive": true
+    },
+    {
+      "id": 11,
+      "name": "Harshloo",
+      "sname": "HN",
+      "companyIdNo": "002",
+      "categoryIdNo": "004",
+      "brandNameIdNo": "1",
+      "genderIdNo": "2",
+      "agIdNo": "1",
+      "subcategoryIdNo": "Ua9wy2A",
+      "brandTypeIdNo": "2",
+      "isActive": false
+    },
+    {
+      "id": 12,
+      "name": "Jay",
+      "sname": "HP",
+      "companyIdNo": "002",
+      "categoryIdNo": "003",
+      "brandNameIdNo": "1",
+      "genderIdNo": "1",
+      "agIdNo": "2",
+      "subcategoryIdNo": "EZ9oFt-",
+      "brandTypeIdNo": "2",
+      "isActive": true
+    },
+    {
+      "id": 13,
+      "name": "qqqqqqqqq",
+      "subcategoryIdNo": "006",
+      "sname": "sa",
+      "agIdNo": "1",
+      "companyIdNo": "001",
+      "brandTypeIdNo": "1",
+      "genderIdNo": "1",
+      "brandNameIdNo": "2",
+      "categoryIdNo": "003",
+      "isActive": false
+    },
+    {
+      "id": 14,
+      "name": "wwww",
+      "subcategoryIdNo": "ZGDPjDH",
+      "sname": "www",
+      "agIdNo": "1",
+      "companyIdNo": "002",
+      "brandTypeIdNo": "2",
+      "genderIdNo": "2",
+      "brandNameIdNo": "2",
+      "categoryIdNo": "001",
+      "isActive": true
+    },
+    {
+      "id": 15,
+      "name": "Iqoo7 legend 2",
+      "subcategoryIdNo": "ZGDPjDH",
+      "sname": "android",
+      "agIdNo": "1",
+      "companyIdNo": "001",
+      "brandTypeIdNo": "1",
+      "genderIdNo": "2",
+      "brandNameIdNo": "2",
+      "categoryIdNo": "003",
+      "isActive": false
+    },
+    {
+      "id": 16,
+      "name": "google watch",
+      "subcategoryIdNo": "6",
+      "sname": "GW",
+      "agIdNo": "2",
+      "companyIdNo": "1",
+      "brandTypeIdNo": "1",
+      "genderIdNo": "1",
+      "brandNameIdNo": "3",
+      "categoryIdNo": "1",
+      "isActive": true
+    },
+    {
+      "id": 17,
+      "name": "POL",
+      "subcategoryIdNo": "6",
+      "sname": "PL",
+      "agIdNo": "1",
+      "companyIdNo": "4",
+      "brandTypeIdNo": "1",
+      "genderIdNo": "3",
+      "brandNameIdNo": "3",
+      "categoryIdNo": "NaN",
+      "isActive": false
+    },
+    {
+      "id": 18,
+      "name": "qwsazx",
+      "subcategoryIdNo": "006",
+      "sname": "zxz",
+      "agIdNo": "1",
+      "companyIdNo": "004",
+      "brandTypeIdNo": "1",
+      "genderIdNo": "2",
+      "brandNameIdNo": "3",
+      "categoryIdNo": "004",
+      "isActive": true
+    },
+    {
+      "id": 19,
+      "name": "aszx",
+      "subcategoryIdNo": "Ua9wy2A",
+      "sname": "xx",
+      "agIdNo": "1",
+      "companyIdNo": "001",
+      "brandTypeIdNo": "2",
+      "genderIdNo": "2",
+      "brandNameIdNo": "3",
+      "categoryIdNo": "003",
+      "isActive": false
+    },
+    {
+      "id": 20,
+      "name": "aaa",
+      "subcategoryIdNo": "6",
+      "sname": "aaav",
+      "agIdNo": "2",
+      "companyIdNo": "4",
+      "brandTypeIdNo": "2",
+      "genderIdNo": "2",
+      "brandNameIdNo": "4",
+      "categoryIdNo": "4",
+      "isActive": true
+    },
+    {
+      "id": 21,
+      "name": "Kcase",
+      "subcategoryIdNo": "006",
+      "sname": "as",
+      "agIdNo": "1",
+      "companyIdNo": "004",
+      "brandTypeIdNo": "1",
+      "genderIdNo": "2",
+      "brandNameIdNo": "4",
+      "categoryIdNo": "003",
+      "isActive": false
+    },
+    {
+      "id": 22,
+      "name": "as",
+      "subcategoryIdNo": "ZGDPjDH",
+      "sname": "sX",
+      "agIdNo": "2",
+      "companyIdNo": "002",
+      "brandTypeIdNo": "1",
+      "genderIdNo": "3",
+      "brandNameIdNo": "2",
+      "categoryIdNo": "003",
+      "isActive": true
+    },
+    {
+      "id": 23,
+      "name": "asd",
+      "subcategoryIdNo": "ZGDPjDH",
+      "sname": "ads",
+      "agIdNo": 1,
+      "companyIdNo": "001",
+      "brandTypeIdNo": 2,
+      "genderIdNo": 3,
+      "brandNameIdNo": 2,
+      "categoryIdNo": "003",
+      "isActive": false
+    }
+  ],
+  "showroom": [
+    {
+      "id": 1,
+      "acnm": "AUV",
+      "acname": "AUV-AURANGABAD",
+      "cityManager": "",
+      "regionalManager": " ",
+      "loc1": "",
+      "etpAcnm": "",
+      "brandIdno": "Walkway",
+      "state": "Maharashtra",
+      "city": "Aurangabad",
+      "zone": "WEST",
+      "shrmType": "High-Street",
+      "status": true,
+      "isActive": false
+    }
+  ],
+  "ag": [
+    {
+      "id": 1,
+      "name": "sds",
+      "sName": "csfsf",
+      "isActive": false
+    },
+    {
+      "id": 2,
+      "name": "rfgd",
+      "sName": "dre",
+      "isActive": true
+    }
+  ],
+  "brandName": [
+    {
+      "id": 1,
+      "name": "cc",
+      "sName": "cc",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "fewas",
+      "sName": "efasdc",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "name": "Nike",
+      "sName": "NK",
+      "isActive": true
+    },
+    {
+      "id": 4,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 5,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 6,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 7,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 8,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 94,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 14,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 24,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    },
+    {
+      "id": 34,
+      "name": "Addidas",
+      "sName": "ADS",
+      "isActive": false
+    }
+  ],
+  "gender": [
+    {
+      "id": 1,
+      "name": "Male",
+      "sName": "M",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "name": "fvsew",
+      "sName": "fgrgrg",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "name": "sdf",
+      "sName": "sdf",
+      "isActive": true
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5,
+      "name": "asas",
+      "sName": "asas",
+      "isActive": true,
+      "apiId": "master"
+    },
+    {
+      "id": 6,
+      "name": "asasas",
+      "sName": "asxsx",
+      "isActive": true,
+      "apiId": "master"
+    },
+    {
+      "id": 7,
+      "name": "ads",
+      "sName": "asd",
+      "isActive": true,
+      "apiId": "master"
+    },
+    {
+      "id": 8,
+      "name": "dgg",
+      "sName": "dg",
+      "isActive": true,
+      "apiId": "master"
+    },
+    {
+      "id": 9,
+      "name": "sfd",
+      "sName": "sfd",
+      "isActive": true,
+      "apiId": "master"
+    },
+    {
+      "id": 10,
+      "name": "af",
+      "sName": "fasd",
+      "isActive": true,
+      "apiId": "master"
+    }
+  ],
+  "brandType": [
+    {
+      "name": "test",
+      "sName": "ts",
+      "isActive": true,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "fds",
+      "sName": "fsd",
+      "isActive": false
+    },
+    {
+      "id": 3
+    }
+  ],
+  "referencedata": {
+    "company": [
+      {
+        "id": "001",
+        "name": "Metro",
+        "sName": "MS",
+        "isActive": false
+      },
+      {
+        "id": "002",
+        "name": "Mochi5",
+        "sName": "DS",
+        "isActive": true
+      },
+      {
+        "id": "004",
+        "name": "Crocs",
+        "sName": "AS",
+        "isActive": false
+      },
+      {
+        "id": "006",
+        "name": "Reebok",
+        "sName": "NS",
+        "isActive": true
+      }
+    ],
+    "category": [
+      {
+        "id": "001",
+        "name": "Metro",
+        "sName": "MS",
+        "isActive": true
+      },
+      {
+        "id": "003",
+        "name": "Walkway",
+        "sName": "MS",
+        "isActive": false
+      },
+      {
+        "id": "004",
+        "name": "vvv",
+        "sName": "vvv",
+        "isActive": true
+      },
+      {
+        "id": "bdZMhSN",
+        "name": "Bhavik",
+        "sName": "gandhi",
+        "isActive": false
+      }
+    ],
+    "subcategory": [
+      {
+        "id": "006",
+        "name": "Reeboks",
+        "sName": "NS",
+        "isActive": false
+      },
+      {
+        "name": "category ",
+        "sName": "kkas",
+        "isActive": true,
+        "id": "ZGDPjDH"
+      },
+      {
+        "id": "Ua9wy2A",
+        "name": "new ",
+        "sName": "qwert",
+        "isActive": false
+      },
+      {
+        "id": "EZ9oFt-",
+        "name": "efwce",
+        "sName": "wefsc",
+        "isActive": true
+      }
+    ],
+    "product": [
+      {
+        "id": 4,
+        "name": "Reeboks",
+        "sname": "NS",
+        "companyName": "ccccccccc",
+        "genderName": "cccccccc",
+        "categoryName": "cccccccc",
+        "subcategoryName": "cccccccc",
+        "agName": "cccccccc",
+        "brandTypeName": "ccccccc",
+        "brandNameName": "ccccc",
+        "isActive": true
+      },
+      {
+        "id": 9,
+        "name": "Product",
+        "sname": "PS",
+        "companyName": "Mochi5",
+        "categoryName": "vvv",
+        "brandNameName": "cc",
+        "genderName": "sdf",
+        "agName": "sds",
+        "subcategoryName": "Reeboks",
+        "brandTypeName": "test",
+        "isActive": false
+      },
+      {
+        "id": 10,
+        "name": "Revant",
+        "sname": "RV",
+        "companyIdNo": "002",
+        "categoryIdNo": "003",
+        "brandNameIdNo": "2",
+        "genderIdNo": "2",
+        "agIdNo": "1",
+        "subcategoryIdNo": "Ua9wy2A",
+        "brandTypeIdNo": "1",
+        "isActive": true
+      },
+      {
+        "id": 11,
+        "name": "Harshloo",
+        "sname": "HN",
+        "companyIdNo": "002",
+        "categoryIdNo": "004",
+        "brandNameIdNo": "1",
+        "genderIdNo": "2",
+        "agIdNo": "1",
+        "subcategoryIdNo": "Ua9wy2A",
+        "brandTypeIdNo": "2",
+        "isActive": false
+      },
+      {
+        "id": 12,
+        "name": "Jay",
+        "sname": "HP",
+        "companyIdNo": "002",
+        "categoryIdNo": "003",
+        "brandNameIdNo": "1",
+        "genderIdNo": "1",
+        "agIdNo": "2",
+        "subcategoryIdNo": "EZ9oFt-",
+        "brandTypeIdNo": "2",
+        "isActive": true
+      }
+    ],
+    "showroom": [
+      {
+        "id": 1,
+        "acnm": "AUV",
+        "name": "AUV-AURANGABAD",
+        "cityManager": "",
+        "regionalManager": " ",
+        "loc1": "",
+        "etpAcnm": "",
+        "brandIdno": "Walkway",
+        "state": "Maharashtra",
+        "city": "Aurangabad",
+        "zone": "WEST",
+        "shrmType": "High-Street",
+        "status": true,
+        "isActive": false
+      }
+    ],
+    "ag": [
+      {
+        "id": 1,
+        "name": "sds",
+        "sName": "csfsf",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "name": "rfgd",
+        "sName": "dre",
+        "isActive": false
+      }
+    ],
+    "brandName": [
+      {
+        "id": 1,
+        "name": "cc",
+        "sName": "cc",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "name": "fewas",
+        "sName": "efasdc",
+        "isActive": false
+      },
+      {
+        "id": 3,
+        "name": "Nike",
+        "sName": "NK",
+        "isActive": true
+      },
+      {
+        "id": 4,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 5,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 6,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 7,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 8,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 94,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 14,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 24,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      },
+      {
+        "id": 34,
+        "name": "Addidas",
+        "sName": "ADS",
+        "isActive": false
+      }
+    ],
+    "gender": [
+      {
+        "id": 1,
+        "name": "Male",
+        "sName": "M",
+        "isActive": true
+      },
+      {
+        "id": 2,
+        "name": "fvsew",
+        "sName": "fgrgrg",
+        "isActive": false
+      },
+      {
+        "id": 3,
+        "name": "sdf",
+        "sName": "sdf",
+        "isActive": true
+      }
+    ],
+    "brandType": [
+      {
+        "name": "test",
+        "sName": "ts",
+        "isActive": true,
+        "id": 1
+      },
+      {
+        "id": 2,
+        "name": "fds",
+        "sName": "fsd",
+        "isActive": false
+      }
+    ]
+  },
+  "showroomtype": [
+    {
+      "id": "001",
+      "name": "Malls",
+      "sName": "ML",
+      "isActive": false
+    },
+    {
+      "id": "002",
+      "name": "Shopping Center",
+      "sName": "DS",
+      "isActive": true
+    },
+    {
+      "id": "0sB7gzC",
+      "name": "Online",
+      "sName": "kn",
+      "isActive": true
+    }
+  ],
+  "period": [
+    {
+      "id": "001",
+      "name": "August",
+      "sName": "Aug",
+      "isActive": true
+    },
+    {
+      "id": "HFBeN1B",
+      "name": "September",
+      "sName": "SEP",
+      "isActive": true
+    },
+    {
+      "id": "tXaRbjb"
+    }
+  ],
+  "zone": [],
+  "state": [],
+  "city": [],
+  "manager": [
+    {
+      "id": 0,
+      "isActive": true,
+      "name": "Jay",
+      "sname": "J10",
+      "contactNo": "8666544444",
+      "emailId": "itsj10.jey@gmail.com"
+    },
+    {
+      "id": 1,
+      "name": "JPB",
+      "contactNo": "9999999999",
+      "emailId": "its@gmail.com",
+      "isActive": false
+    }
+  ],
+  "distribution": {
+    "companyId": null,
+    "genderId": null,
+    "categoryId": null,
+    "subcategoryId": null,
+    "agId": null,
+    "brandtypeId": null,
+    "brandnameId": null,
+    "periodId": null,
+    "apiId": "limits"
+  },
+  "limitCategsory": {},
+  "limitCompany": {
+    "header": [
+      {
+        "placeHolderName": "Company Name",
+        "propName": "companyName"
+      },
+      {
+        "placeHolderName": "Month_Yr",
+        "propName": "monthYr"
+      },
+      {
+        "placeHolderName": "Limit",
+        "propName": "limit"
+      },
+      {
+        "placeHolderName": "Quota",
+        "propName": "quota"
+      }
+    ],
+    "data": [
+      {
+        "id": null,
+        "companyName": "Metro",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Mochi",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Studio-m",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Walkway",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Dmart",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "FitFlop",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Franchise",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Warehouse",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Backup",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Crocs",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Hypercity",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "HO",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Vertual WH",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      },
+      {
+        "id": null,
+        "companyName": "Brand",
+        "periodId": null,
+        "monthYr": "2022-06",
+        "companyId": null,
+        "limit": null,
+        "quota": null
+      }
+    ],
+    "totalRows":15222
+  }
+}
